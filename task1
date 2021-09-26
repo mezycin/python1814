@@ -1,0 +1,14 @@
+duration = int(input('Введите кол-во секунд'))
+
+min = 60
+hour = min * 60
+day = hour * 24
+
+if duration < min:
+  print(duration, 'сек')
+elif duration < hour:
+  print(duration // min, 'мин', duration % min, 'сек')
+elif duration < day:
+  print(duration // hour, 'ч', duration % hour // min, 'мин', duration % min, 'сек')
+else:
+  print(duration // day,'дн', duration % day // hour, 'ч', duration % hour // min, 'мин', duration % min, 'сек')
